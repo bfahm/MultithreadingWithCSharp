@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultithreadingDrafts", "MultithreadingDrafts\MultithreadingDrafts.csproj", "{4E268C32-9536-4A12-839C-2C5C58A096E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultithreadingDrafts", "MultithreadingDrafts\MultithreadingDrafts.csproj", "{4E268C32-9536-4A12-839C-2C5C58A096E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CupOfTea", "CupOfTea\CupOfTea.csproj", "{8A5EF1D6-40DC-4000-8973-A350BDFCDFB5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CupOfTea", "CupOfTea\CupOfTea.csproj", "{8A5EF1D6-40DC-4000-8973-A350BDFCDFB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CancelationTokenDemo", "CancelationTokenDemo\CancelationTokenDemo.csproj", "{B717B4A2-CC97-4C74-9224-8A9696753446}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{8A5EF1D6-40DC-4000-8973-A350BDFCDFB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A5EF1D6-40DC-4000-8973-A350BDFCDFB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A5EF1D6-40DC-4000-8973-A350BDFCDFB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B717B4A2-CC97-4C74-9224-8A9696753446}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B717B4A2-CC97-4C74-9224-8A9696753446}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B717B4A2-CC97-4C74-9224-8A9696753446}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B717B4A2-CC97-4C74-9224-8A9696753446}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
