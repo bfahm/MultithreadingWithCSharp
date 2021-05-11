@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CupOfTea
 {
-    class TeaMaker
+    class CupOfTea
     {
         #region Sync
         string BoilWater()
