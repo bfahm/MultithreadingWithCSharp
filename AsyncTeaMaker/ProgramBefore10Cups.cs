@@ -5,11 +5,10 @@ using System.Threading.Tasks;
 
 namespace AsyncTeaMaker
 {
-    class Program
+    class ProgramBefore10Cups
     {
-        static async Task Main(string[] args)
+        static async Task _Main(string[] args)
         {
-            await AETest.RUNAsync();
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
             await MakeTeaAsync();

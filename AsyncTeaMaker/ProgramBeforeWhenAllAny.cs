@@ -1,15 +1,13 @@
 ﻿using System;
 using System.Diagnostics;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace AsyncTeaMaker
 {
-    class Program
+    class ProgramBeforeWhenAllAny
     {
-        static async Task Main(string[] args)
+        static async Task _Main(string[] args)
         {
-            await AETest.RUNAsync();
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
             await MakeTeaAsync();
@@ -31,14 +29,12 @@ namespace AsyncTeaMaker
 
         static async Task<string> PrepareCupsAsync(int numberOfCups)
         {
-            Task[] eachCupTask = Enumerable.Range(1, numberOfCups).Select(index => 
+            for (int i = 0; i < numberOfCups; i++)
             {
-                Console.WriteLine($"Taking cup #{index} out.");
+                Console.WriteLine($"Taking cup #{i + 1} out.");
                 Console.WriteLine("Putting tea and sugar in the cup");
-                return Task.Delay(3000);
-            }).ToArray();
-
-            await Task.WhenAll(eachCupTask);
+                await Task.Delay(3000);
+            }
 
             Console.WriteLine("Finished preparing the cups");
 
