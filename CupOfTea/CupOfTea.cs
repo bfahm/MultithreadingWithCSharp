@@ -117,6 +117,7 @@ namespace CupOfTea
             $"Pour {water} into cups".Dump();
         }
 
+        // DONE
         public void NotaBenne_1()
         {
             /* Calling a function returning a task results in the creation of a 
@@ -133,18 +134,16 @@ namespace CupOfTea
             var myTask = BoilWaterAsync();
 
             /* In case the function is async:
-             * Both calls causes the start of the task, without waiting (or 'awaiting') any awaitable child tasks,
-             * execution of the function will continue once the long running child task finishes, but it is not 
+             * Both calls causes the start of the task, without waiting (or 'awaiting') any awaitable child tasks, it is not 
              * guaranteed the the rest of the function would be reached if not awaited.
-             */
-            
-            /* In case the function is NOT async and there are no inner awaited calls:
-             * Both calls will causes the start of the task, waiting for it to end.
              */
         }
 
-        public void NotaBenne_2()
+        public async Task NotaBenne_2()
         {
+            // VIP: See this
+            //https://devblogs.microsoft.com/pfxteam/faq-on-task-start/
+
             // HOT vs COLD tasks..
 
             // var boilingWater_HotTask = BoilWaterAsync(); // This is a hot task, it starts off immediately
@@ -164,9 +163,12 @@ namespace CupOfTea
 
             // The above task will not start until calling a function that does so:
             boilingWater_ColdTask.Start();
-            boilingWater_ColdTask.Wait();
+            //boilingWater_ColdTask.Wait();
+
+            await boilingWater_ColdTask;
         }
 
+        // DONE
         public void NotaBenne_3()
         {
             /* Always make sure that the awaitable task is awaited to the top-level caller, this means that
@@ -185,6 +187,7 @@ namespace CupOfTea
             // Await the function means you'll await all the child tasks created inside the function.
         }
 
+        // DONE
         public Task<string> NotaBenne_4()
         {
             /* Okay, so let's say we are implementing an interface, one of it's methods requires a Task<string> 
@@ -206,6 +209,7 @@ namespace CupOfTea
             //return Task.CompletedTask; // if it requires a return type Task not Task<string>
         }
 
+        // DONE
         public Task<string> NotaBenne_5()
         {
             // Now we have an HTTP client retrieving some text from an external website.
@@ -230,6 +234,7 @@ namespace CupOfTea
             return content;
         }
 
+        // DONE
         public void NotaBenne_6()
         {
             // Assume the current function is a top-level one, and we need to call a method that is returning a task
@@ -255,6 +260,7 @@ namespace CupOfTea
              */
         }
 
+        // SKIPPED
         public void NotaBenne_7()
         {
             // Both tasks has started running simultainously.
@@ -268,6 +274,7 @@ namespace CupOfTea
             // SEE NotaBenne_8
         }
 
+        // SKIPPED
         public Task NotaBenne_8()
         {
             // SEE NotaBenne_7
